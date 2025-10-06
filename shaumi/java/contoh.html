@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="judul"> <b>JUDUL</b> </h1>
+    <ul>
+        <li class="list">1</li>
+        <li class="list">2</li>
+        <li class="list">3</li>
+        <li class="list">4</li>
+    </ul>
+
+    <script>
+        console.log(document.getElementById("judul").innerText)
+        console.log(document.getElementById("judul").innerHTML)
+        document.getElementsByClassName("list")[2].style.color = "skyblue"
+        document.getElementsByClassName("list")[1].style.color = "pink"
+    </script>
+</body>
+</html>

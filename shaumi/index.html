@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List Sederhana</title>
+    <link rel="stylesheet" href="tugas.css">
+</head>
+
+<body>
+    <h1>To-Do List</h1>
+
+    <input type="text" id="todoInput" placeholder="Tulis tugas di sini..." />
+    <button onclick="tambahTodo()" id="tambahButton">Tambah</button>
+
+    <ul id="todoList">
+        <!-- Tugas-tugas akan muncul di sini -->
+         <li>TODO 1 <button>Hapus</button> <button>Edit</button> </li>
+    </ul>
+
+    <script>
+  // Menyimpan daftar tugas
+  let daftarTodo = [];
+
+  // Fungsi untuk menampilkan daftar ke halaman
+  function tampilkanTodo() {
+    const todoList = document.getElementById("todoList");
+    todoList.innerHTML = ""; // Kosongkan daftar sebelum ditampilkan ulang
+
+    daftarTodo.forEach((item, index) => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      todoList.appendChild(li);
+    });
+  }
+
+  function tambahTodo() {
+    const input = document.getElementById("todoInput");
+    const nilaiInput = input.value.trim();
+
+    if (nilaiInput === "") {
+      alert("Isi tugas tidak boleh kosong!");
+      return;
+    }
+
+    daftarTodo.push(nilaiInput);  // Tambahkan ke array
+    input.value = "";             // Kosongkan input setelah ditambahkan
+    tampilkanTodo();              // Tampilkan ulang daftar
+  }
+
+  function tampilkanTodo() {
+  const todoList = document.getElementById("todoList");
+  todoList.innerHTML = "";
+
+  daftarTodo.forEach((item, index) => {
+    const li = document.createElement("li");
+    li.textContent = item + " ";
+
+    // Membuat tombol hapus
+    const tombolHapus = document.createElement("button");
+    tombolHapus.textContent = "Hapus";
+    tombolHapus.onclick = function () {
+      hapusTodo(index);
+    };
+
+    li.appendChild(tombolHapus);
+    todoList.appendChild(li);
+  });
+}
+
+function tampilkanTodo() {
+  const todoList = document.getElementById("todoList");
+  todoList.innerHTML = "";
+
+  daftarTodo.forEach((item, index) => {
+    const li = document.createElement("li");
+    li.textContent = item + " ";
+
+    // Membuat tombol hapus
+    const tombolHapus = document.createElement("button");
+    tombolHapus.textContent = "Hapus";
+    tombolHapus.onclick = function () {
+      hapusTodo(index);
+    };
+
+    li.appendChild(tombolHapus);
+    todoList.appendChild(li);
+  });
+}
+function hapusTodo(index) {
+  daftarTodo.splice(index, 1); // Menghapus 1 item dari array
+  tampilkanTodo(); // Tampilkan ulang daftar setelah dihapus
+}
+</script>
+</body>
+
+</html>

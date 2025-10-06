@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>JavaScript HTML Events</h1>
+<h2>The onclick Attribute</h2> -->
+
+<!-- <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button> -->
+<!-- <button onclick="this.innerHTML=Date()">The time is?</button> -->
+<!-- <button onclick="displayDate()">The time is?</button>
+
+<script>
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+
+<p id="demo"></p> -->
+<h1 id="judul">Judul</h1>
+<button class="upjudul" onclick="judulup()">Update Judul</button>
+<script>
+    function judulup() {
+        // document.getElementsByClassName("upjudul")[0].innerText="judul baru" 
+        document.getElementById("judul").innerText= "judul di update"
+
+        }
+    </script>
+
+    <button onclick="tombol()">Klik tombol</button>
+    <script> 
+    function tombol(){
+        alert("sudah di update")
+    }
+    </script>
+</body>
+</html>

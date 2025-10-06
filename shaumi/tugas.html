@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pangkat (a,b){
+            if (typeof a !== 'number' || typeof b !== 'number'){
+                return "input harus berupa angka";
+            }
+            return (a**b);
+        }
+
+        function ganjilgenap (angka){
+            if (typeof angka !== 'number' || isNaN(angka)){
+                return "input harus berupa angka";
+            }
+
+            if (angka % 2 === 0){
+                return "genap";
+            } else {
+                return "ganjil";
+            }
+        }
+
+        console.log(pangkat(2,2));
+        console.log(pangkat('nunu'))
+        console.log(ganjilgenap(10));
+        console.log(ganjilgenap('minu'));
+    </script>
+</body>
+</html>

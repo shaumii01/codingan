@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="">nama</label>
+        <input id="nama" name="nama" type="text">
+    </div>
+
+    <div>
+        <label for="">kelas</label>
+        <input id="kelas" name="kelas" type="text">
+    </div>
+
+
+    <div>
+        <label for="">jurusan</label>
+        <input id="jurusan" name="jurusan" type="text">
+    </div>
+
+    <button onclick="tampilkan">Simpan</button>
+    <div id="data"></div>
+
+    <script>
+        function tampilkan(){
+            let nama = document.getElementById("nama");
+            let kelas = document.getElementById("kelas");
+            let jurusan = document.getElementById("jurusan");
+            let data = document.getElementById("data");
+
+            data.innerHTML = `<h1> Data diri </h1> <p>${nama.value}</p> <p>${kelas.value}</p> <p>${jurusan.value}</p>`
+        }
+    </script>
+</body>
+</html>

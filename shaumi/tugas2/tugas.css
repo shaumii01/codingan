@@ -1,0 +1,60 @@
+.card{
+    background-color: white;
+    width: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin : 0 auto;
+    box-sizing: border-box;
+    box-shadow: 8px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card .header{
+    width: 100%;
+    height: 200px;
+    background-image: url("./image.png");
+    background-size: cover;
+}
+
+.card .display {
+    width: 100%;
+    display:  flex;
+    justify-content: center;
+    text-align: center;
+    gap : 30px;
+}
+
+
+.card h1 {
+    text-align: center;
+}
+
+
+.card .container-button{
+    display: flex;
+    justify-content: center;
+    /* gap : 10px; */
+}
+
+.card .container-button button {
+    flex : 1;
+    border: none;
+    padding : 20px;
+    border-radius: 0;
+}
+
+.card .container-button button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.card .container-button button:nth-child(1) {
+    background-color: lightblue;
+}
+
+.card .container-button button:nth-child(2) {
+    background-color: lightgreen;
+}
+
+
+.card .container-button button:nth-child(3) {
+    background-color: lightcoral;
+}
